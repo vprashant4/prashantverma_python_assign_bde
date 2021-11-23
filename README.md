@@ -8,7 +8,7 @@ pipenv install or pipenv install --dev or pipenv sync or pipenv sync --dev
 ```
 ### Run task 1
 
-### change dir to task1
+### Change dir to task1
 ```sh
 python connect.py
 ```
@@ -19,7 +19,7 @@ get_parts('<your parameters>')
 ```
 
 ### Run task 2
-### change dir to task2
+### Change dir to task2
 ```sh
 flask run
 ```
