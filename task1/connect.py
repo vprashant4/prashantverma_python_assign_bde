@@ -13,7 +13,7 @@ def get_parts(organisation_id):
         # connect to the PostgreSQL server
         print('Connecting to the PostgreSQL database...')
         conn = psycopg2.connect(**params)
-		
+
         # create a cursor object for execution
         cur = conn.cursor()
         
@@ -23,19 +23,16 @@ def get_parts(organisation_id):
 
         # process the result set
         row = cur.fetchone()
-        while row is not None:
-            print(row)
-            row = cur.fetchone()
-       
-	# close the communication with the PostgreSQL database server
-        cur.close()
+        print(row)
+        return row
+
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
     finally:
         if conn is not None:
-            conn.close()
+            #conn.close()
             print('Database connection closed.')
-            
+
 
 if __name__ == '__main__':
-    get_parts('5a9e003fa6da98d9852ccf13')
+    get_parts('55ea54a0f3e5bb58f0002a14')
