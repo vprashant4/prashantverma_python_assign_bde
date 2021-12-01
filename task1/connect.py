@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import psycopg2
-from config import config
+from task1.config import config
 
 
 def get_parts(organisation_id):
@@ -30,9 +30,9 @@ def get_parts(organisation_id):
         print(error)
     finally:
         if conn is not None:
-            #conn.close()
+            conn.close()
             print('Database connection closed.')
 
 
 if __name__ == '__main__':
-    get_parts('55ea54a0f3e5bb58f0002a14')
+    get_parts('5a9e003fa6da98d9852ccf13')
